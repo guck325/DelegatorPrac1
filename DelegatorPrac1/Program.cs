@@ -12,6 +12,11 @@ namespace DelegatorPrac1
         {
             public string Name { get; set; }
             public int Price { get; set; }
+            public override string ToString()
+            {
+                return this.Name + " : " + this.Price;
+
+            }
         }
         static void Main(string[] args)
         {
@@ -44,10 +49,13 @@ namespace DelegatorPrac1
 
 
             //출력
-            foreach (var item in products)
-            {
-                Console.WriteLine(item.Name + " : " + item.Price);
-            }
+            //foreach (var item in products)
+            // {
+            //     Console.WriteLine(item.Name + " : " + item.Price);
+            // }
+
+            products.ForEach(p => Console.WriteLine(p.Name + " : " + p.Price));
+ 
 
            
         }
